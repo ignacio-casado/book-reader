@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useAppContext } from "../store/store";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 
 export default function Create(){
@@ -12,6 +12,7 @@ export default function Create(){
     const [review, setReview] = useState("");
 
     const store = useAppContext();
+    const navigate = useNavigate();
     function handleChange(e){
         const value = e.target.value;
         const name = e.target.name;
@@ -49,6 +50,7 @@ export default function Create(){
             review: review
         };
         store.createItem(newBook);
+        navigate("/");
    }
     function handleOnChangeFile(e){
         e.preventDefault();
@@ -65,7 +67,7 @@ export default function Create(){
     return (
        
         <Layout>
-<div className="Create">
+        <div className="Create">
           
             <form onSubmit={handleSubmit}>
                 <div>

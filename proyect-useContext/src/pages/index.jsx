@@ -4,9 +4,10 @@ import { useAppContext } from "../store/store"
 
 export default function Index (){
     const store = useAppContext();
+ 
     return(
         <Layout>
-        <div>
+        <div className="bookMap">
             
            {store.items.map((item) =>(
            <Book key={item.id} item={item} />

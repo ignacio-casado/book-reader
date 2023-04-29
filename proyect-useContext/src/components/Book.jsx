@@ -1,4 +1,6 @@
+ //prettier-ignore-start
 import { Link } from "react-router-dom"
+
 export default function Book ({ item }){
     return (
 
@@ -12,3 +14,4 @@ export default function Book ({ item }){
         </div>
     )
 }
+ //prettier-ignore-end

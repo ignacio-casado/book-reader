@@ -16,7 +16,7 @@ export default function View(){
     }
     return(
         <Layout>
-           <h2>{item?.tittle}</h2> 
+           <h2 className="tittle">{item?.tittle}</h2> 
            <div>{item?.cover? <img src={item?.cover} alt="pic" width="400"/>: ""}</div>
             <div>{item ?.author}</div>
             <div>{item ?.intro}</div>

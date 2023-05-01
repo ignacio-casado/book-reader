@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useAppContext } from "../store/store";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 
 export default function Create(){
@@ -71,7 +71,7 @@ export default function Create(){
           
             <form onSubmit={handleSubmit}>
                 <div>
-                    <div>Title</div>
+                    <div>Titulo</div>
                     <input
                      type="text" 
                      name="tittle"
@@ -133,7 +133,7 @@ export default function Create(){
                      />
                 </div>
 
-                <div>
+                <div className="submit">
                     <input type="submit" value="Register Book" />
                 </div>
             </form>

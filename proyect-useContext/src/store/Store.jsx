@@ -1,4 +1,5 @@
 import { createContext, useContext, /* useEffect, */ useState } from "react"
+import Swal from 'sweetalert2'
 
 const AppContext = createContext({
     items: [],
@@ -30,12 +31,32 @@ export default function Store({ children }){
         
         temp[index] = {...item}
     }
+    function sweetAlert(){
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Libro cargado :)'
+          })
+    }
     return(
         <AppContext.Provider value={{
             items,
             createItem,
             getItem,
             updateItem,
+            sweetAlert,
         }}>
             {children}
         </AppContext.Provider>

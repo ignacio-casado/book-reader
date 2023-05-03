@@ -50,6 +50,7 @@ export default function Create(){
             review: review
         };
         store.createItem(newBook);
+        store.sweetAlert();
         navigate("/");
    }
     function handleOnChangeFile(e){
@@ -93,14 +94,18 @@ export default function Create(){
                 </div>
 
              <div>
-                    <div>Cover</div>
+                    <div>Tapa</div>
+
                 <input
-                     type="file" 
+                    className="btn btn-dark"
+                    type="file" 
                     name="cover"
                     onChange={handleOnChangeFile}
-                     />
-                     <div>{ !!cover ? < img src={cover} width="200" alt="preview"/>: ""}</div>
-                </div> */
+                />
+                <label  className="form-label"> { !!cover ? < img src={cover} width="200" alt="preview"/>: ""}</label>
+                    
+
+                </div> 
                 <div>
                     <div>Introduccion</div>
                 <input
@@ -132,9 +137,9 @@ export default function Create(){
                     value={review}
                      />
                 </div>
-
+               
                 <div className="submit">
-                    <input type="submit" value="Register Book" />
+                     <button type="submit" value="Register Book" className="btn btn-dark">Cargar libro</button>
                 </div>
             </form>
         </div>

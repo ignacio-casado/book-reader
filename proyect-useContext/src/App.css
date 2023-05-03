@@ -84,3 +84,31 @@
   font-size: 16px;
   cursor: pointer;
 }
+ form {
+  font-size: 24px;
+  display: inline-block;
+  width: 500px;
+  height: auto;
+  outline: dashed 1px rgb(132, 132, 132);
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+form input{
+  width: 50%;
+  height: 20px;
+}
+form div{
+  padding: 5px;
+}
+ .submit{
+  margin-bottom: 20px;
+}
+.container-fluid{
+  margin-top: -100px;
+}
+h1{
+  margin-top: -30px;
+}
+nav{
+  margin-bottom: -50px;
+}
